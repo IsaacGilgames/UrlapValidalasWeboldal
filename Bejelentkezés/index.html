@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Bejelentkezési felület</title>
+    <link rel="icon" type="image/x-icon" href="img/exam.png">
+  </head>
+  <body>
+    
+    <div class="kontener">
+      <div class="urlapok-kontener">
+        <div class="belepes-regisztracio">
+          <form action="#" class="belepes-urlap">
+            <h2 class="cim">Bejelentkezés</h2>
+            <div class="bemeneti-mezo">
+              <i class="fas fa-user"></i>
+              <input type="text" id="fnev_be" placeholder="Felhasználónév">
+            </div>
+            <div class="bemeneti-mezo">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="jelszo_be" placeholder="Jelszó">
+            </div>
+            <input type="button" value="Bejelentkezés" class="gomb alap" onclick="Belepes()">
+            <p class="kozossegi-szoveg">Vagy lépj be közösségi média felülettel</p>
+            <div class="kozossegi-media">
+              <a href="google.html" class="kozossegi-ikon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google">
+              </a>
+              <a href="face.html" class="kozossegi-ikon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+              </a>
+              <a href="x.html" class="kozossegi-ikon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter (X)">
+              </a>
+              <a href="linkd.html" class="kozossegi-ikon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+              </a>
+            </div>
+          </form>
+
+          <form action="#" class="regisztracio-urlap">
+            <h2 class="cim">Regisztráció</h2>
+            <div class="urlap-gorgeto">
+              <div class="bemeneti-mezo">
+                <i class="fas fa-user"></i>
+                <input id="veznev" type="text" placeholder="Vezetéknév">
+              </div>
+              <div class="bemeneti-mezo">
+                <i class="fas fa-user"></i>
+                <input id="kernev" type="text" placeholder="Keresztnév">
+              </div>
+              <div class="bemeneti-mezo">
+                <i class="fas fa-calendar"></i>
+                <input type="text" id="szuldatum" placeholder="Születési dátum" onfocus="(this.type='date')">
+              </div>
+              <div class="bemeneti-mezo">
+                <i class="fas fa-home"></i>
+                <input type="text" id="lakcim" placeholder="Lakcím">
+              </div>
+              <div class="bemeneti-mezo">
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="tel" placeholder="Telefonszám">
+              </div>
+              <div class="bemeneti-mezo">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email">
+              </div>
+              <div class="bemeneti-mezo">
+                <i class="fas fa-user"></i>
+                <input type="text" id="felhasznalonev" placeholder="Felhasználónév">
+              </div>
+              <div class="bemeneti-mezo">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="jelszo" placeholder="Jelszó">
+              </div>
+              <div class="bemeneti-mezo">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="jelszomegegyszer" placeholder="Jelszó megrősítése">
+              </div>
+            </div>
+            <input type="button" class="gomb" id="kesz" value="Regisztráció" onclick="Validalas()">
+
+            <p class="kozossegi-szoveg">Vagy regisztrálj közösségi média felülettel</p>
+            <div class="kozossegi-media">
+              <a href="google.html" class="kozossegi-ikon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google">
+              </a>
+              <a href="face.html" class="kozossegi-ikon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+              </a>
+              <a href="x.html" class="kozossegi-ikon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter (X)">
+              </a>
+              <a href="linkd.html" class="kozossegi-ikon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panelek-kontener">
+        <div class="panel bal-panel">
+          <div class="tartalom">
+            <h3>Új vagy?</h3>
+            <p>
+              Hozz létre egy új fiókot, hogy hozzáférj a szolgáltatásainkhoz, 
+              és élvezd a személyre szabott élményt!
+            </p>
+            <button class="gomb atlatszo" id="regisztracio-gomb">
+              Regisztráció
+            </button>
+          </div>
+          <img src="img/log.svg" class="kep" alt="">
+        </div>
+        <div class="panel jobb-panel">
+          <div class="tartalom">
+            <h3>Van már fiókod?</h3>
+            <p>
+              Jelentkezz be a meglévő fiókoddal, és folytasd ott, ahol legutóbb abbahagytad!
+            </p>
+            <button class="gomb atlatszo" id="belepes-gomb">
+              Bejelentkezés
+            </button>
+          </div>
+          <img src="img/register.svg" class="kep" alt="">
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

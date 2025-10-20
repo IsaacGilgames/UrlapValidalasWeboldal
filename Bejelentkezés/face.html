@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kezdőlap</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .loader {
+      width: 120px;
+      height: 20px;
+      mask: linear-gradient(90deg, #000 70%, #0000 0) 0 0 / 20% 100%;
+      mask-repeat: repeat;
+      background: linear-gradient(#000 0 0) 0 0 / 0% 100% no-repeat #ddd;
+      animation: l4 2s infinite steps(6);
+      margin-bottom: 20px;
+    }
+
+    @keyframes l4 {
+      100% { background-size: 120% 100%; }
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+  <h1>Fejlesztés alatt...</h1>
+</body>
+</html>

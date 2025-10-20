@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobérlés</title>
+    <link rel="website icon" type="png" href="kepek/sedan.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- https://animate.style/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7c18bf1db8.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="firstRow" class="">
+        <header class="header">
+            <!-- Full-viewport hero with background image -->
+            <div id="hero">
+                <div class="hero-content">
+                    <h1 style="margin: auto; text-align: center;">AutoRent Hungary</h1>
+                    <p style="text-align: center; font-style: italic;margin-top: 100px;">"Megbízható, gyors és
+                        egyszerű autóbérlés Ikerváron! Csak és kizárólag kíváló állapotú gépsárkányok!"
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <main class="main" style="margin-top: 7.5px; margin-bottom: 7.5px;" id="gorget">
+            <div class="row" style="margin: 15px auto;">
+                <div class="col-xl-6">
+                    <h3 style="font-weight: bold;">Miért válasszon minket?</h3>
+                    <p>Gyors, egyszerű és megbízható autóbérlés</p>
+                    <p>Nálunk az autóbérlés nem bonyolult – pár perc alatt lefoglalhatja a járművet, amire szüksége
+                        van.
+                        Modern, jól karbantartott gépjárműparkunkkal és rugalmas feltételeinkkel biztosítjuk, hogy
+                        Ön
+                        mindig
+                        kényelmesen és biztonságban utazhasson.</p>
+                    <ul>
+                        <li>Kíváló ár-érték arány</li>
+                        <li>Átlátható bérlési feltételek</li>
+                        <li>Barátságos és segítőkész ügyfélszolgálat</li>
+                        <li>Folyamatosan karbantartott, tiszta autók</li>
+                    </ul>
+                </div>
+                <div class="col-xl-6">
+
+                    <img src="kepek/garage.jpg" alt="Car Image" class="img-fluid rounded shadow-lg kiemelkedik"
+                        style="left: 60%;">
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 15px;">
+                <div class="col-xl-6">
+                    <img src="kepek/csapatkep.png" alt="Car Image" class="img-fluid rounded shadow-lg kiemelkedik">
+                </div>
+                <div class="col-xl-6">
+                    <h3 style="font-weight: bold;">Rólunk</h3>
+                    <p>A AutoRent Hungary egy családi vállalkozásként indult, mára pedig a régió egyik
+                        megbízható
+                        szereplőjévé vált az autóbérlés területén. Küldetésünk, hogy ügyfeleink gyorsan és
+                        problémamentesen
+                        találjanak megfelelő járművet akár üzleti útra, nyaralásra vagy hétvégi kiruccanásra.</br>
+                        A flottánkban megtalálhatóak a gazdaságos városi kisautóktól a családi egyterűeken át
+                        egészen a
+                        prémium kategóriás modellekig szinte minden járműtípus. Fontos számunkra az elégedettség,
+                        ezért
+                        minden bérlést személyre szabottan kezelünk.</p>
+                </div>
+            </div>
+            <div class="row" style="border-bottom: solid 2px grey;">
+                <div class="col-xl-6">
+                    <h3 style="font-weight: bold;">Bérlési feltételek</h3>
+                    <ul>
+                        <li>Érvényes személyi igazolvány és jogosítvány (minimum 1 éves) szüksége.</li>
+                        <li>A bérlőnek legalább 18 évesnek kell lennie.</li>
+                    </ul>
+                    <h3 style="font-weight: bold;">Autó átvétele & visszaadása</h3>
+                    <ul>
+                        <li>Az autó átvételekor a bérlőnek alá kell írnia a bérleti szerződést és át kell vennie a
+                            járművet.
+                        </li>
+                        <li>Az autót tisztán és teljes tankkal kell visszaadni.</li>
+                    </ul>
+                </div>
+                <div class="col-xl-6">
+                    <h3 style="font-weight: bold;">Foglalás & fizetés:</h3>
+                    <ul>
+                        <li>A foglalás véglegesítéséhez előleg vagy teljes összeg befizetése szükséges.</li>
+                        <li>Elfogadott fizetési módok: készpénz, bankkártya, átutalás.</li>
+                    </ul>
+                    <h3 style="font-weight: bold;">Tilos:</h3>
+                    <ul>
+                        <li>A jármű bármiféle szándékos módosítása, rongálása.</li>
+                        <li>A jármű engedély nélküli továbbadása harmadik félnek.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 autok_tabla">
+                    <div class="card-container">
+                        <div class="card ">
+                            <img src="kepek/raptor.jfif" class="card-img-top" alt="Ford Raptor">
+                            <div class="card-body">
+                                <h5 class="card-title">Ford Raptor</h5>
+                                <ul class="card-text">
+                                    <li>3 literes V6 EcoBoost</li>
+                                    <li>4x4 hajtás</li>
+                                    <li>292 HP</li>
+                                    <li>felező</li>
+                                    <li>3500 kg a maximálisan vontatható tömeg</li>
+                                </ul>
+                                <p class="card-price">60 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('Ford Raptor', 'kepek/raptor.jfif', '60000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/xclass.jpg" class="card-img-top" alt="Mercedes Xclass">
+                            <div class="card-body">
+                                <h5 class="card-title">Mercedes Xclass</h5>
+                                <ul class="card-text">
+                                    <li>4.0 V8 motor</li>
+                                    <li>520 HP</li>
+                                    <li>4MATIC+</li>
+                                    <li>fényfíd</li>
+                                    <li>csörlő</li>
+                                </ul>
+                                <p class="card-price">100 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('Mercedes Xclass', 'kepek/xclass.jpg','100000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/m4competition.webp" class="card-img-top" alt="BMW M4 Competition">
+                            <div class="card-body">
+                                <h5 class="card-title">BMW M4 Competition</h5>
+                                <ul class="card-text">
+                                    <li>3.0 soros 6 hengeres motor</li>
+                                    <li>510 HP</li>
+                                    <li>sport futómű</li>
+                                    <li>M packet</li>
+                                    <li>xDrive</li>
+                                </ul>
+                                <p class="card-price">80 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('BMW M4 Competition', 'kepek/m4competition.webp','80000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/Mercedes-AMG.jpg" class="card-img-top" alt="Mercedes-AMG CLE 53 Coupé">
+                            <div class="card-body">
+                                <h5 class="card-title">Mercedes-AMG CLE 53 Coupé</h5>
+                                <ul class="card-text">
+                                    <li>3 literes motor</li>
+                                    <li>elektromos turbófeltöltő</li>
+                                    <li>443 HP</li>
+                                    <li>AMG line</li>
+                                    <li>4MATIC+ összkerékhajtás</li>
+                                </ul>
+                                <p class="card-price">90 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('Mercedes-AMG CLE 53 Coupé', 'kepek/Mercedes-AMG.jpg','90000'),scrollToTop()"><span>Bérlés</span></button>
+
+                            </div>
+                        </div>
+
+
+                        <div class="card ">
+                            <img src="kepek/G.jpg" class="card-img-top" alt="Opel Astra G OPC">
+                            <div class="card-body">
+                                <h5 class="card-title">Opel Astra G OPC</h5>
+                                <ul class="card-text">
+                                    <li>2.0 16V motor</li>
+                                    <li>160 HP</li>
+                                    <li>manuális váltó</li>
+                                    <li>kúposztó</li>
+                                    <li>megbízható</li>
+                                </ul>
+                                <p class="card-price">15 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('Opel Astra G OPC', 'kepek/G.jpg','15000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/typeR.jpeg" class="card-img-top" alt="2021 Honda Civic Type R">
+                            <div class="card-body">
+                                <h5 class="card-title">2021 Honda Civic Type R</h5>
+                                <ul class="card-text">
+                                    <li>2.0 VTEC motor</li>
+                                    <li>329 HP</li>
+                                    <li>elsőkerékhajtás</li>
+                                    <li> sportos</li>
+                                    <li>gazdaságos</li>
+                                </ul>
+                                <p class="card-price">35 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('2021 Honda Civic Type R', 'kepek/typeR.jpeg','35000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/1.9.jpg" class="card-img-top" alt="Volkswagen Passat B5">
+                            <div class="card-body">
+                                <h5 class="card-title">Volkswagen Passat B5</h5>
+                                <ul class="card-text">
+                                    <li>1.9 PDTDI</li>
+                                    <li>116 HP</li>
+                                    <li>kormol</li>
+                                    <li>gazdaságos</li>
+                                    <li>popcorn</li>
+                                </ul>
+                                <p class="card-price">20 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('Volkswagen Passat B5', 'kepek/1.9.jpg','20000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/argqv.webp" class="card-img-top" alt="Alfa Romeo Giulia Quadrofoglio Verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Alfa Romeo Giulia Quadrofoglio Verde</h5>
+                                <ul class="card-text">
+                                    <li>2.9 V6 motor</li>
+                                    <li>510 HP</li>
+                                    <li>végsebesség: 307 km/h</li>
+                                    <li>hátsőkerekes</li>
+                                    <li>szeret enni</li>
+                                </ul>
+                                <p class="card-price">55 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('Alfa Romeo Giulia Quadrofoglio Verde', 'kepek/argqv.webp','55000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+
+
+                        <div class="card ">
+                            <img src="kepek/crafter.jpg" class="card-img-top" alt="Volkswagen Crafter">
+                            <div class="card-body">
+                                <h5 class="card-title">Volkswagen Crafter</h5>
+                                <ul class="card-text">
+                                    <li>2.0 TDI</li>
+                                    <li>hasznos teher: 1356 kg</li>
+                                    <li>136 HP</li>
+                                    <li>plató méretei: 2.85x2x0.40 (m)</li>
+                                    <li>arrébb lehet vele állni</li>
+                                </ul>
+                                <p class="card-price">25 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('Volkswagen Crafter', 'kepek/crafter.jpg','25000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/sprinter.webp" class="card-img-top" alt="Mercedes Sprinter">
+                            <div class="card-body">
+                                <h5 class="card-title">Mercedes Sprinter</h5>
+                                <ul class="card-text">
+                                    <li>2.1 CDI</li>
+                                    <li>190 HP</li>
+                                    <li>20 ülés</li>
+                                    <li>5 t össztömeg</li>
+                                    <li>D kat. jogosítvány + GKI kártya szükséges</li>
+                                </ul>
+                                <p class="card-price">45 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('Mercedes Sprinter', 'kepek/sprinter.webp','45000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/mantge.jpg" class="card-img-top" alt="MAN TGE">
+                            <div class="card-body">
+                                <h5 class="card-title">MAN TGE</h5>
+                                <ul class="card-text">
+                                    <li>2.0 TDI</li>
+                                    <li>163 HP</li>
+                                    <li>raktér méretei: 595x200x265 (cm)</li>
+                                    <li>18 m<sup>3</sup> raktér</li>
+                                    <li>4x4 hajtás</li>
+                                </ul>
+                                <p class="card-price">35 000 Ft/Nap</p>
+                                <a href="#"></a><button type="button" class="btn_berles"
+                                    onclick="change_overlay('MAN TGE', 'kepek/mantge.jpg','35000'),scrollToTop()"><span>Bérlés</span></button></a>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/yaris.jpg" class="card-img-top" alt="Toyota Yaris GR">
+                            <div class="card-body">
+                                <h5 class="card-title">Toyota Yaris GR</h5>
+                                <ul class="card-text">
+                                    <li>450 HP</li>
+                                    <li>TOM-TECH futómű</li>
+                                    <li>short shifter</li>
+                                    <li>nyitott rendszer</li>
+                                    <li>kagylóülések</li>
+                                </ul>
+                                <p class="card-price">75 000 Ft/Nap</p>
+                                <button type="button" class="btn_berles"
+                                    onclick="change_overlay('Toyota Yaris GR', 'kepek/yaris.jpg', '75000'),scrollToTop()"><span>Bérlés</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+
+        <footer class="bg-dark text-light py-4 ">
+            <div class="container text-center animateanimated animatefadeInUp">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <h5 class="font-weight-bold">Kapcsolat</h5>
+                        <p>Email: <a href="mailto:info@autorenthungary.hu">info@autorenthungary.hu</a></p>
+                        <p>Telefon: <a href="tel:+36203802415">+36 20 380 2415</a></p>
+                    </div>
+                    <div class="col-xl-4">
+                        <img src="kepek/sedan.png" alt="Logo" height="150">
+                    </div>
+                    <div class="col-xl-4">
+                        <h5 class="font-weight-bold">Kövess minket</h5>
+                        <div class="d-flex justify-content-center">
+                            <a href="https://hu-hu.facebook.com/" class="text-body mx-2"><i
+                                    class="fab fa-facebook fa-2x"></i></a>
+                            <a href="https://x.com/" class="text-body mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="https://www.instagram.com/" class="text-body mx-2"><i
+                                    class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3">© 2025 AutoRent Hungary.
+                    Minden jog fenntartva.</p>
+            </div>
+        </footer>
+        <div id="imgOverlay"
+            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+            <img id="overlayImg" src=""
+                style="max-width:90vw; max-height:90vh; border:5px solid white; border-radius:10px;">
+        </div>
+
+    </div>
+
+    <div id="secondRow">
+        <header>
+            <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                <div class="container-fluid">
+                    <h1 class="text-center w-100">AutoRent Hungary</h1>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- kiválasztott autó megjelenítése (kitöltéskor ide kerül a választás) -->
+            <div id="selectedCarContainer" class="container ">
+                <div id="selectedCarDisplay" class=" justify-content-center selected-car-details row">
+                    <div id="selectedCarExtra" class="col-xl-5 col-12"></div>
+                    <div id="selectedCarText" class="col-xl-5 col-12"></div>
+                    <button type="button" onclick="torol()" style="max-width: 50px; " id="clearSelectedCarBtn"
+                        class="  btn btn-outline-danger col-xl-1 col-12">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CSAK A FORM KÓDJA – folytatás/bővített változat (Bootstrap + Font Awesome + anime.js támogatott) -->
+            <form id="rentalForm" class="needs-validation" novalidate>
+                <input type="hidden" id="selectedCarInput" name="selectedCar" value="">
+                <!-- Visszajelzés helye -->
+                <div id="overlay">
+                    <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);background-color: #f0f0f0;padding: 40px;border: 2px solid #333;border-radius: 10px;box-shadow: 0 0 10px rgba(0,0,0,0.2);text-align: center; min-width: 400px;">
+                        <a href="minon.html" onclick="bezar()"><button style="vertical-align: top; float: right; width: 50px; height: 50px;border: none;box-shadow: none; padding: 0; margin: 0; background-color: none;" type="button" class="btn-close" aria-label="Close" >&#x2715;</button></a>
+                        <p id="uzi"></p>
+                    </div>
+                </div>
+
+                <!-- 1. sor: Név, E-mail -->
+                <div class="row g-3">
+                    <div class="col-xl-6 form-item">
+                        <label for="fullName" class="form-label">
+                            <i class="fa-solid fa-user me-1"></i> Teljes név
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" oninput="nevValid()" class="form-control" id="fullName" name="fullName"
+                                placeholder="Pl. Kovács Anna" required minlength="2" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 form-item">
+                        <label for="motherName" class="form-label">
+                            <i class="fa-solid fa-user me-1"></i> Anyja (lánykori) neve
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" oninput="anyadValid()" class="form-control" id="motherName"
+                                name="motherName" placeholder="Pl. Virág Ilona" required minlength="2"
+                                autocomplete="off">
+                        </div>
+
+                    </div>
+                    <div class="col-xl-6 form-item">
+                        <label for="address" class="form-label">
+                            <i class="fa-solid fa-house me-1"></i> Lakcím
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-house"></i></span>
+                            <input type="text" oninput="cimValid()" class="form-control" id="address" name="address"
+                                placeholder="Pl. 9700 Szombathely, Király utca 1." required autocomplete="off">
+                        </div>
+
+                    </div>
+                    <div class="col-xl-6 form-item">
+                        <label for="email" class="form-label">
+                            <i class="fa-solid fa-envelope me-1"></i> E-mail cím
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" oninput="emailValid()" class="form-control" id="email" name="email"
+                                placeholder="pl. te@pelda.hu" required autocomplete="off" inputmode="email">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 2. sor: Telefon, Születési dátum -->
+                <div class="row g-3 mt-0">
+                    <div class="col-xl-6 form-item">
+                        <label for="phone" class="form-label">
+                            <i class="fa-solid fa-phone me-1"></i> Telefonszám
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                            <input type="tel" oninput="phoneValid()" class="form-control" id="phone" name="phone"
+                                placeholder="+36 30 123 4567" required autocomplete="off" inputmode="tel">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-6 form-item">
+                        <label for="birthDate" class="form-label">
+                            <i class="fa-solid fa-cake-candles me-1"></i> Születési dátum
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-calendar-day"></i></span>
+                            <input type="date" oninput="korValid()" class="form-control" value="" max="" min=""
+                                id="birthDate" autocomplete="off" name="birthDate" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 3. sor: Bérlés mettől–meddig -->
+                <div class="row g-3 mt-0">
+                    <div class="col-xl-6 form-item">
+                        <label for="rentalStart" class="form-label">
+                            <i class="fa-solid fa-calendar-plus me-1"></i> Bérlés kezdete (mettől)
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-calendar-plus"></i></span>
+                            <input type="date" oninput="Szamol()" autocomplete="off" value="" class="form-control"
+                                id="rentalStart" name="rentalStart" required>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-6 form-item">
+                        <label for="rentalEnd" class="form-label">
+                            <i class="fa-solid fa-calendar-check me-1"></i> Bérlés vége (meddig)
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-calendar-check"></i></span>
+                            <input type="date" oninput="Szamol()" autocomplete="off" value="" class="form-control"
+                                id="rentalEnd" name="rentalEnd" required>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Opcionális megjegyzés -->
+                <div class="row g-3 mt-0">
+                    <div class="col-12 form-item">
+                        <label for="notes" class="form-label">
+                            <i class="fa-regular fa-comment-dots me-1"></i> Megjegyzés (opcionális)
+                        </label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3"
+                            placeholder="Ide írhatod a különleges kéréseket..."></textarea>
+                    </div>
+                </div>
+                <!-- d kat. jogsi + gki kartya -->
+                <div class="row mt-3" style="display: none;" id="d_gki">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" id="jogsi" name="jogsi" required>
+                            <label class="form-check-label" for="jogsi">
+                                Rendelkezem D kategóriás jogosítvánnyal és GKI kártyával a saját nevemre.
+                            </label>
+                            <div class="invalid-feedback">A D kategóriás jogosítvány és a GKI kártya kötelező.</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adatkezelési hozzájárulás -->
+                <div class="row mt-3">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" id="consent" name="consent"
+                                required>
+                            <label class="form-check-label" for="consent">
+                                Hozzájárulok az adataim kezeléséhez az <a
+                                    href="https://gdpr.eu/hu/sample-privacy-policy/" target="_blank"> adatkezelési
+                                    tájékoztató</a> szerint.
+                            </label>
+                            <div class="invalid-feedback">A hozzájárulás megadása kötelező.</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Összegzés: élő nap-számláló -->
+                <div class="row mt-2">
+                    <div class="col">
+                        <div id="rentalSummary" style="font: 5rem;" class=" text-muted" aria-live="polite">
+                            <i class="fa-regular fa-clock me-1"></i>Válaszd ki a dátumokat a bérlés időtartamához.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gombok -->
+                <div class="row mt-4">
+                    <div class="col-12 d-grid d-xl-flex gap-2">
+                        <button type="button" class="btn btn-primary btn-lg m-2" onclick="validateForm();">
+                            <span class="btn-icon me-2"><i class="fa-solid fa-paper-plane"></i></span>
+                            <span class="btn-label">Küldés</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+
+        </main>
+        <footer class="bg-dark text-light py-4 ">
+            <div class="container text-center animateanimated animatefadeInUp">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <h5 class="font-weight-bold">Kapcsolat</h5>
+                        <p>Email: <a href="mailto:info@autorenthungary.hu">info@autorenthungary.hu</a></p>
+                        <p>Telefon: <a href="tel:+36203802415">+36 20 380 2415</a></p>
+                    </div>
+                    <div class="col-xl-4">
+                        <img src="kepek/sedan.png" alt="Logo" height="150">
+                    </div>
+                    <div class="col-xl-4">
+                        <h5 class="font-weight-bold">Kövess minket</h5>
+                        <div class="d-flex justify-content-center">
+                            <a href="https://hu-hu.facebook.com/" class="text-body mx-2"><i
+                                    class="fab fa-facebook fa-2x"></i></a>
+                            <a href="https://x.com/" class="text-body mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="https://www.instagram.com/" class="text-body mx-2"><i
+                                    class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3">© 2025 AutoRent Hungary.
+                    Minden jog fenntartva.</p>
+            </div>
+        </footer>
+        <p id="d" style="display: none;"></p>
+    </div>
+</body>
+
+</html>

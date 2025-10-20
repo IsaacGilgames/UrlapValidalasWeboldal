@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiók létrehozása</title>
+  <link rel="stylesheet" href="google.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="img/google.png">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google logó" />
+    </div>
+    <h1>Fiók létrehozása</h1>
+
+    <form id="registerForm">
+      <input type="text" id="firstname" placeholder="Utónév" required />
+      <input type="text" id="lastname" placeholder="Családnév" required />
+      <input type="email" id="email" placeholder="E-mail" required />
+      <input type="password" id="password" placeholder="Jelszó" required />
+
+      <label for="birthyear">Születési dátum</label>
+      <div class="birthdate">
+        <select id="birthyear" required>
+          <option value="">Év</option>
+        </select>
+
+        <select id="birthmonth" required>
+          <option value="">Hónap</option>
+        </select>
+
+        <select id="birthday" required>
+          <option value="">Nap</option>
+        </select>
+      </div>
+
+      <button type="submit">Fiók létrehozása</button>
+    </form>
+    <a href="login.html">Már van fiókod? Bejelentkezés</a>
+  </div>
+
+  <script>
+
+
+    const evsz = document.getElementById("birthyear");
+    const jelenev = new Date().getFullYear();
+    for (let y = jelenev; y >= 1900; y--) {
+      const option = document.createElement("option");
+      option.value = y;
+      option.textContent = y;
+      evsz.appendChild(option);
+    }
+
+
+    const honaplist = document.getElementById("birthmonth");
+    const honapok = ["Január","Február","Március","Április","Május","Június","Július","Augusztus","Szeptember","Október","November","December"];
+    for (let i = 0; i < honapok.length; i++) {
+      const option = document.createElement("option");
+      option.value = i + 1;
+      option.textContent = honapok[i];
+      honaplist.appendChild(option);
+    }
+
+
+    const nap = document.getElementById("birthday");
+      nap.innerHTML = '<option value="">Nap</option>';
+      for (let d = 1; d <= 31; d++) {
+        const option = document.createElement("option");
+        option.value = d;
+        option.textContent = d;
+        nap.appendChild(option);
+      }
+
+
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const firstname = document.getElementById("firstname").value.trim();
+      const lastname = document.getElementById("lastname").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const year = evsz.value;
+      const month = honaplist.value;
+      const day = nap.value;
+
+      
+      if (password.length < 8) {
+        alert("A jelszónak legalább 8 karakterből kell állnia!");
+        return;
+      }
+      if (!firstname || !lastname || !email || !password || !year || !month || !day) {
+        alert("Kérlek, töltsd ki az összes mezőt!");
+        return;
+      }
+
+      alert("Sikeres regisztráció!");
+    });
+  </script>
+
+ 
+</body>
+</html>

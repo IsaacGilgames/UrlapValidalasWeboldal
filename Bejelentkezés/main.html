@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Üdvözlünk...</title>
+    <link rel="icon" type="image/x-icon" href="img/browser.png">
+</head>
+<body>
+    <div class="container">
+        <div class="loader"></div>
+        <p class="message" id="udvozloUzenet">Üdvözöljük ...!</p><br>
+        <p style="font-size: 18px; font-style: italic;">Az oldal betöltése folyamatban...</p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const felhasznalo = urlParams.get('felhasznalo');
+        if (felhasznalo) {
+            document.getElementById('udvozloUzenet').textContent = 'Üdvözöljük ' + felhasznalo + '!';
+        }
+    </script>
+</body>
+</html>

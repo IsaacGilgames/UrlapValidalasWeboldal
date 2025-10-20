@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Cuki Minonos Név</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .form-box {
+            background-image: url(kepek/minon.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            filter: blur(1px);
+            -webkit-filter: blur(1px);
+            height: 60%;
+            max-width: 400px;
+            width: 50%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+
+        }
+
+        form {
+            max-width: 500px;
+            height: 70%;
+            width: 60%;
+            background-color: rgb(255, 255, 255);
+            /* Fallback color */
+            background-color: rgba(218, 218, 218, 0.4);
+            /* Black w/opacity/see-through */
+            color: black;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        .glass {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            background-color: #fdd835;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #fbc02d;
+        }
+
+        @media (max-width: 900px) {
+            .form-box {
+                padding: 20px;
+                width: 100%;
+            }
+
+            input,
+            button {
+                font-size: 14px;
+            }
+
+            form {
+                width: 100%;
+                height: 80%;
+            }
+        }
+
+        .vissza-gomb-container {
+            position: absolute;
+            top: 20px;
+            left: 90%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        .vissza-gomb-container button {
+            padding: 10px 20px;
+            background-color: #fdd835;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .vissza-gomb-container button:hover {
+            background-color: #fbc02d;
+        }
+        h4{
+            font-size: 1.2rem;
+            text-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vissza-gomb-container">
+        <a href="index.html"><button type="button">Vissza</button></a>
+    </div>
+    <div class="form-box">
+    </div>
+    <form>
+        <h2>Mi lenne az extra cuki minonos neved?</h2>
+        <label for="fullName">
+            <i>Teljes neved:</i>
+        </label>
+        <input class="glass" type="text" id="fullName" name="fullname" placeholder="Radics Attila" required>
+        <label for="cardnumber">
+            <i>Bankkártyaszámod</i>
+        </label>
+        <input class="glass" type="text" id="cardnumber" name="cardnumber" placeholder="1234-5678-9012-3456" required>
+        <label for="securitycode">
+            <i>Biztonsági kódja</i>
+        </label>
+        <input class="glass" type="text" id="securitycode" name="securitycode" placeholder="123" required><br>
+        <label for="date">
+            <i>Lejárati dátuma</i>
+        </label>
+        <input class="glass" type="text" id="date" name="date" placeholder="07/29" required>
+        <button onclick="Kiir()" style="background-color: rgba(255, 222, 76, 0.5);" type="button">Kérem az extra cuki
+            minonos
+            nevemet</button>
+        <h4 id="ki">Az extra cuki minonos neved: </h4>
+    </form>
+    <script>
+        function Kiir() {
+            let nev = document.getElementById("fullName").value;
+            let kszam = document.getElementById("cardnumber").value;
+            let bkod = document.getElementById("securitycode").value;
+            let ldatum = document.getElementById("date").value;
+            const minionNevek = [
+                "Bubuplop",
+                "Zsiziwoo",
+                "Mimimók",
+                "Kokozoz",
+                "Tütünyó",
+                "Lalabim",
+                "Pötyipox",
+                "Gugugli",
+                "Nyunyóka",
+                "Bambibum",
+                "Csicsibee",
+                "Fififán",
+                "Zsuzsuzsá",
+                "Tapsifon",
+                "Mókamax",
+                "Dudubee",
+                "Plimplom",
+                "Tikitaka",
+                "Zsömzsöm",
+                "Bingibong",
+                "Kebab",
+                "Szamir",
+                "Diégó",
+                "Gibbon",
+                "Goblin barrel",
+                "Umpa Lumpa",
+                "Feri",
+                "Viktór",
+                "Dzsavéró Ráfál",
+                "Lakatos Pikácsú",
+                "Larissza",
+                "Dzsúszti",
+                "Táki Gyuszi",
+                "Gál Szabika",
+                "Golden Lezli",
+                "Guliguli"
+            ];
+            console.log(ldatum);
+            console.log(bkod);
+            console.log(kszam);
+            console.log(nev);
+            if (nev === "" && kszam === "" && bkod === "" && ldatum === "") {
+                console.log("dew")
+            }
+            else {
+                const index = Math.floor(Math.random() * minionNevek.length);
+                let text = "Az extra cuki minonos neved:<br><span style='font-size: 1.6rem;'>" + minionNevek[index]+"</span>";
+                document.getElementById("ki").innerHTML = text;
+                document.getElementById("fullName").value = "";
+                kszam = document.getElementById("cardnumber").value = "";
+                bkod = document.getElementById("securitycode").value = "";
+                ldatum = document.getElementById("date").value = "";
+
+            }
+        }
+    </script>
+</body>
+
+</html>

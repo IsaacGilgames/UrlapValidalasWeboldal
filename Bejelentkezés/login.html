@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés</title>
+    <link rel="stylesheet" href="google.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/google.png">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google logó">
+        </div>
+        <h1>Jelentkezzen be a Chrome-ba</h1>
+        <p style="text-align: justify;">Nem a saját számítógépét használja? Használja a vendég módot a privát bejelentkezéshez. <a href="https://support.google.com/chrome/answer/6130773?hl=hu" target="_blank">További információ a vendég mód használatáról</a></p>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="password" placeholder="Jelszó" required>
+            <button type="submit">Tovább</button>
+        </form>
+        <a href="register.html">Fiók létrehozása</a>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+           
+            if(email === '' || password === '') {
+                alert('Kérlek, töltsd ki az összes mezőt!');
+            }
+            else if (password.length < 8) {
+                alert("A jelszónak legalább 8 karakterből kell állnia!");
+                return;
+            } 
+            else {
+                alert('Sikeres bejelentkezés!');
+            }
+        });
+    </script>
+</body>
+</html>

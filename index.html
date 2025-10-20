@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regisztrációs projekt</title>
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --accent:#2563eb;
+      --muted:#6b7280;
+      --radius:12px;
+      --shadow: 0 6px 18px rgba(16,24,40,0.06);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:var(--bg); color:#0f172a}
+    .wrap{max-width:1100px;margin:32px auto;padding:16px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    h1{font-size:1.25rem;margin:0}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:0.95rem}
+
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+    
+    .card{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between;min-height:150px;transition:transform .16s ease, box-shadow .16s ease}
+    .card:focus-within, .card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(16,24,40,0.08)}
+    .card h2{margin:0 0 8px;font-size:1.05rem}
+    .card small{color:var(--muted)}
+
+  
+    .actions{display:flex;gap:8px;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border-radius:10px;border:1px solid transparent;text-decoration:none;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white;border-color:rgba(37,99,235,0.9)}
+    .btn-outline{background:transparent;color:var(--accent);border-color:rgba(37,99,235,0.12)}
+    .btn:focus{outline:3px solid rgba(37,99,235,0.15);outline-offset:3px}
+
+  
+    footer{margin-top:20px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+  
+    @media (max-width:420px){.wrap{padding:12px} .card{padding:12px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Csapatok</h1>
+        <p class="lead">A csapatok projektjei és az ürlap hozzájuk</p>
+      </div>
+      <div aria-hidden="true">🔗</div>
+    </header>
+
+    <main>
+      <section class="grid" id="cards">
+       
+      </section>
+    </main>
+
+
+  </div>
+
+  <script>
+    let csapatok = [
+        {
+            leiras: "SneakerZone",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/projekt/index.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLScJld1THbVQFH1uGRRyaRrf-tFTniXrxnoI_1Xdv7ic4EB4lw/viewform?usp=header"
+        },
+        {
+            leiras: "Autóbérlés",
+            weblap: "autoberles/index.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLScGiNXeVBmlJkbE5Frq0uY5U4-g7TpeE7twoCh0I6R-aISZkA/viewform?usp=header"
+        },
+        {
+            leiras: "Futó verseny",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/bejelentkezes/futas.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLSc3cgWMn_HA3JnypM7TVVThkoErwPdAWiu_oHljeXZxncMTHg/viewform?usp=header"
+        },
+        {
+            leiras: "Bejelentkezés",
+            weblap: "Bejelentkezés/index.html",
+            urlap: "https://isaacgilgames.github.io/HannaMarciAlex/"
+        },
+        {
+            leiras: "Dechatlon",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/bejelentkezesi_lap/shop.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLSd35iLygmSfp_UK8zRpB4ds4-Ks-sXB8SQxfAOTtAF8L5vZ9Q/viewform?usp=header"
+        },
+        {
+            leiras: "CsótÚszás",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/cs%C3%B3t%C3%B3%C3%A1t%C3%BAsz%C3%A1s/main.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLSdOIhvImgtEmjOpLAI7DZoS2JDm60HEJvwYBp3NThzl_PNGdA/viewform?usp=header"
+        },
+        {
+            leiras: "HabKickz",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/HabKickz/index.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLSc_HpEqUW7erGpf1fdjOvRKAXlvJiYtMcnn9wTNY5dcJQq1Kg/viewform?usp=header"
+        },
+        {
+            leiras: "Nyereményjáték",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/int/int.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLSfr6pNE2CmD3xOC-sRFI2fjslMdMQTUs0wCSKj74_OKrDpxNw/viewform?usp=header"
+        },
+        {
+            leiras: "Gym",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/login/indexLogin.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLSf0cnE5IJtqDZKDWgbeEtTdAJ6pR6AdZ9Kgzfihc0rtaEKa2Q/viewform?usp=header"
+        },
+        {
+            leiras: "Bejelentkezési felület",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/login-page-main/index.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLSfdEFhybD695RloVuehySjeLEMXaL6r2GW1rFtOG35S-G-kCw/viewform?usp=header"
+        },
+        {
+            leiras: "MOTTO KIRÁNDULÁSOK",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/MOTTO-kir-ndul-sok/index.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLSfx_5nwPn7ECSRgNUsfWH25ZaNyKZtlNk7T21pJclT9XH9zZg/viewform?usp=header"
+        },
+        {
+            leiras: "Kincsestár Fegyverbolt",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/pppp/index.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLSe2h9AFzP8SPhKZwOrV9tU1rThGSvC0seui89TJAP_KV3zf9Q/viewform?usp=header"
+        },
+        {
+            leiras: "Bejelentkezés",
+            weblap: "https://isaacgilgames.github.io/UrlapValidalas/Weblap/HTML/index.html",
+            urlap: "https://docs.google.com/forms/d/e/1FAIpQLScSMDjLugpVPETrAXKoJlteCA28nbZEWgs7riySkAMfVI4C0w/viewform?usp=header"
+        },
+    ]
+    const container = document.getElementById('cards');
+    for(let i=1;i<=13;i++){
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.innerHTML = `
+        <div>
+          <h2>${i}. csapat</h2>
+          <small>${csapatok[i-1].leiras}</small>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="${csapatok[i-1].weblap}" target="_blank" role="button" aria-label="${i}. csapat — részletek">Weblap</a>
+          <a class="btn btn-outline" href="${csapatok[i-1].urlap}" target="_blank" role="button" aria-label="${i}. csapat — statisztika">Ürlap</a>
+        </div>
+      `;
+      container.appendChild(card);
+    }
+  </script>
+</body>
+</html>
+
+
+
